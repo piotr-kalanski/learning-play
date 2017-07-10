@@ -23,6 +23,6 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   }
 
   def getName() = Action {
-    Ok("Piotr K")
+    Ok("Piotrek")
   }
 }
