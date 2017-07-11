@@ -10,3 +10,7 @@ GET     /                           controllers.HomeController.index
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
 GET		/name				        controllers.HomeController.getName
+
+GET     /person/:id                 controllers.HomeController.getPerson(id: String)
+
+GET     /people                     controllers.HomeController.getPeople()
