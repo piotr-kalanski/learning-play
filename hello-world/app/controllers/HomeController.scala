@@ -2,12 +2,8 @@ package controllers
 
 import javax.inject._
 
-import models.Person
-import org.json4s.DefaultFormats
 import play.api._
-import play.api.libs.json.Json
 import play.api.mvc._
-import org.json4s.native.Serialization.write
 
 /**
  * This controller creates an `Action` to handle HTTP requests to the
@@ -15,7 +11,6 @@ import org.json4s.native.Serialization.write
  */
 @Singleton
 class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
-  implicit val formats = DefaultFormats
   /**
    * Create an Action to render an HTML page.
    *
@@ -31,15 +26,4 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok("Piotrek K")
   }
 
-  def getPerson(id: String) = Action {
-    Ok(write(Person(id, "p_" + id)))
-  }
-
-  def getPeople() = Action {
-    Ok(write(Seq(
-      Person("1", "p1"),
-      Person("2", "p2"),
-      Person("3", "p3")
-    )))
-  }
 }

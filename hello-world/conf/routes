@@ -11,6 +11,6 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 GET		/name				        controllers.HomeController.getName
 
-GET     /person/:id                 controllers.HomeController.getPerson(id: String)
+GET     /person/:id                 controllers.PeopleController.getPerson(id: String)
 
-GET     /people                     controllers.HomeController.getPeople()
+GET     /people                     controllers.PeopleController.getPeople
